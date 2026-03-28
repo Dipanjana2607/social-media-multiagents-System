@@ -23,7 +23,7 @@ Turning social content planning into product-grade automation. Social Media Agen
 
 | Layer | Technology | Purpose |
 |---|---|---|
-| **LLM** | Google Gemini 1.5 Flash | Powers all three agents (Planner, Executor, Verifier) |
+| **LLM** | Google Gemini 2.5 Flash | Powers all three agents (Planner, Executor, Verifier) |
 | **LLM Framework** | LangChain (`langchain`, `langchain-google-genai`) | Wraps Gemini with `ChatGoogleGenerativeAI`, manages `SystemMessage` / `HumanMessage` formatting |
 | **Backend** | FastAPI | REST API server — exposes `/api/v1/content/generate` and `/api/v1/content/platforms` |
 | **ASGI Server** | Uvicorn | Runs the FastAPI app with hot-reload in development |
@@ -176,7 +176,7 @@ pip install fastapi "uvicorn[standard]" langchain langchain-google-genai \
 
 ```bash
 # inside backend/.env
-GOOGLE_API_KEY=your_google_api_key_here
+google_api_key=your_google_api_key_here
 ```
 
 Get a free key at [aistudio.google.com](https://aistudio.google.com) → Get API Key.
