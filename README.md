@@ -2,6 +2,11 @@
 
 Turning social content planning into product-grade automation. Social Media Agent is an agentic AI platform that coordinates Planner, Executor, and Verifier agents to research, draft, and validate social posts across platforms (Instagram, Twitter/X, LinkedIn).
 
+## LOOM Video 
+
+[Watch the Loom Video](https://www.loom.com/share/430e70d47f6e497ca37b8ad1e773a9d9)
+
+
 ---
 
 ## Why it matters
@@ -158,7 +163,7 @@ social_media_agents/
 ### 1. Clone and set up environment
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Dipanjana2607/social-media-multiagents-System.git
 cd social_media_agents
 
 python -m venv venv
@@ -170,6 +175,11 @@ venv\Scripts\activate
 pip install fastapi "uvicorn[standard]" langchain langchain-google-genai \
             google-generativeai python-dotenv pydantic pydantic-settings \
             streamlit requests
+
+# OR
+
+pip install -r requirements.txt
+
 ```
 
 ### 2. Create your `.env` file
@@ -185,7 +195,7 @@ Get a free key at [aistudio.google.com](https://aistudio.google.com) → Get API
 
 ```bash
 cd backend
-python run.py
+uvicorn main:app --reload
 # Server starts at http://localhost:8000
 # Interactive API docs at http://localhost:8000/docs
 ```
